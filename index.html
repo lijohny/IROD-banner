@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IROD</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<section class="main-parent bg-[#2b2d38] h-full md:h-screen w-full flex flex-col overflow-hidden px-[10px] md:px-[50px]">
+  <header class="container mx-auto flex items-center justify-between pt-[40px]">
+    <h2 class="text-[#219653] merriweather-bold text-[2rem]">Hero</h2>
+    <nav id="menu" class="hidden lg:flex gap-14 text-[#848488] text-[20px] font-semibold">
+      <a href="#">Home</a>
+      <a href="#">Feat</a>
+      <a href="#">Blog</a>
+      <a href="#">Contact</a>
+      <a href="#">About us</a>
+    </nav>
+    <div class="lg:hidden">
+      <button id="open-menu" class="text-gray-500 focus:outline-none focus:text-gray-700">
+        <svg class="h-[40px] w-[40px]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <div id="sidebar" class="fixed inset-y-0 left-0 z-10 w-64 bg-gray-900 lg:w-72 lg:block">
+    <div class="flex items-center justify-between px-4 py-6">
+      <button id="close-menu" class="text-gray-500 focus:outline-none lg:hidden">
+        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+        </svg>
+      </button>
+    </div>
+    <nav class="mt-5">
+      <a href="#" class="block py-2 px-4 text-gray-300 hover:bg-gray-800">Home</a>
+      <a href="#" class="block py-2 px-4 text-gray-300 hover:bg-gray-800">Features</a>
+      <a href="#" class="block py-2 px-4 text-gray-300 hover:bg-gray-800">Blog</a>
+      <a href="#" class="block py-2 px-4 text-gray-300 hover:bg-gray-800">Contact</a>
+      <a href="#" class="block py-2 px-4 text-gray-300 hover:bg-gray-800">About us</a>
+    </nav>
+  </div>
+
+  <div class="flex items-center flex-col lg:flex-row justify-center container mx-auto flex-grow pt-[25px] pb-[50px]">
+    <img class="md:hidden" src="./assets/main-banne.jpg" alt="">
+    <div class="w-full">
+      <h1 class="text-white merriweather-bold text-[36px] md:text-[50px] xl:text-[70px] py-[8px] md:py-[15px] leading-normal tracking-in-contract lg:w-[80%]">Build your best community starting from here.</h1>
+      <p class="text-[#848488] font-semibold lg:text-lg xl:text-2xl py-[8px] md:py-[15px] leading-normal lg:w-[70%]">Meet and communicate with the best people to run projects, events or other activities in a more effective and fun way</p>
+      <div class="flex flex-col md:flex-row items-center gap-[30px] text-white text-xl pt-[15px] pb-[25px] md:pb-[60px]">
+        <button class="transition duration-500 ease-out hover:ease-in bg-[#219653] border border-[#219653] hover:bg-white hover:text-[#219653] px-[35px] py-[10px] lg:px-[65px] lg:py-[15px] rounded-[10px] lg:rounded-bl-none lg:rounded-t-xl lg:rounded-br-xl w-full lg:w-fit md:text-[22px]">Get started</button>
+        <a href="#" class="learnmore w-full lg:w-fit flex gap-[10px] items-center justify-center underline underline-offset-1 font-bold md:text-[22px] hover:text-[#219653]">Learn more<img class="w-[24px] h-[24px] mt-[7px]" src="./icons/right-arrow.png" alt="arrow"></a>
+      </div>
+      <div class="banner-bottom-options gap-[20px] justify-between items-center md:justify-start">
+        <div class="banner-bottom-options">
+          <img class="w-[40px] lg:p-[4px] bg-[#5E5E5E] rounded-md" src="./icons/Comments.png" alt="">
+          <h6 class="text-white text-[12px] lg:text-[18px]">Build Community</h6>
+        </div>
+        <div class="banner-bottom-options">
+          <img class="w-[40px] lg:p-[4px] bg-[#5E5E5E] rounded-md" src="./icons/Post.png" alt="">
+          <h6 class="text-white text-[12px] lg:text-[18px]">Share events</h6>
+        </div>
+        <div class="banner-bottom-options">
+          <img class="w-[40px] lg:p-[4px] bg-[#5E5E5E] rounded-md" src="./icons/Week-Schedule.png" alt="">
+          <h6 class="text-white text-[12px] lg:text-[18px]">Get Information</h6>
+        </div>
+      </div>
+    </div>
+    <div class="hidden parent-box banner-image-container items-center md:flex justify-between md:pt-[20px] lg:pt-0 lg:justify-end w-full lg:w-[80%] gap-[0px] relative">
+      <div class="flex flex-row lg:flex-col md:gap-[25px] lg:gap-[0px]">
+        <div class="pulsate-fwd banner-people bg-[#6e1fed] lg:m-[5px] xl:m-[15px]">
+          <img class="banner-people-images w-[110px] lg:w-full" src="./assets/handsome-serious-calm-guy-with-dark.png" alt="">
+        </div>
+        <div class="pulsate-fwd banner-people bg-[#219653] lg:m-[5px] xl:m-[15px]">
+          <img class="lg:hidden banner-people-images w-[110px] lg:w-full" src="./assets/positive-smiling-handsome-caucasian-man-looks.png" alt="">
+          <img class="hidden lg:block banner-people-images w-[110px] lg:w-full" src="./assets/vertical-shot-of-young-european-woman-in-glasses.png" alt="">
+        </div>
+      </div>
+      <div class="flex flex-row lg:flex-col md:gap-[25px] lg:gap-[0px]">
+        <div class="pulsate-fwd banner-people bg-[#60d3d9] lg:m-[5px] xl:m-[15px]">
+          <img class="lg:hidden banner-people-images w-[110px] lg:w-full" src="./assets/handsome-serious-calm-guy-with-dark.png" alt="">
+          <img class="hidden lg:block banner-people-images w-[110px] lg:w-full" src="./assets/pretty-young-asian-woman-makes-meditating.png" alt="">
+        </div>
+        <div class="pulsate-fwd banner-people bg-[#ff7e29] lg:m-[5px] xl:m-[15px]">
+          <img class="banner-people-images w-[110px] lg:w-full" src="./assets/positive-smiling-handsome-caucasian-man-looks.png" alt="">
+        </div>
+      </div>
+      <div class="pulsate-fwd banner-people bg-[#f4b840] lg:m-[5px] xl:m-[15px]">
+        <img class="banner-people-images w-[110px] lg:w-full" src="./assets/positive-dark-skinned-woman-dressed.png" alt="">
+      </div>
+    </div>
+    
+  </div>
+</section>  
+
+<script src="./script.js"></script>
+</body>
+</html>
